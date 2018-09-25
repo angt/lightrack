@@ -187,7 +187,7 @@ lt_wait(int fd)
             return 1;
         }
 
-        if (!r)
+        if (!ret)
             break;
     }
 
