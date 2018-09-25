@@ -2,6 +2,11 @@
 
 WIP
 
+For now, you have to drop RST packets with something like:
+```
+iptables -A OUTPUT -p tcp --tcp-flags RST RST -s [...] -j DROP
+```
+
 ```
 socket(AF_INET, SOCK_STREAM, IPPROTO_TCP) = 3                             │socket(AF_INET, SOCK_STREAM, IPPROTO_TCP) = 3
 setsockopt(3, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0                       │setsockopt(3, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
